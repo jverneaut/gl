@@ -1,8 +1,9 @@
 import { log, logVersion } from './utils/log';
 
+logVersion();
+
 const init = () => {
-  log('init');
-  logVersion();
+  log('Init');
 };
 
 init();
