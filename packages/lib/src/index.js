@@ -1,27 +1,15 @@
 import { log, logVersion } from './utils/log';
 
-logVersion();
+import Scene from './entities/Scene';
 
 const init = () => {
-  log('Init');
+  logVersion();
 };
 
 init();
 
-// Mock functions
-export const createShaderFromText = () => {};
+export const createShader = () => {
+  log('Create new shader - not implemented');
+};
 
-export const createProgram = () => {};
-
-export const createMesh = () => {};
-
-export const createScene = () => {};
-
-export const createTexture = () => {};
-
-export const createAttribute = () => {};
-
-// 2D canvas-like function
-export const drawImage = () => {};
-
-export const draw2DCanvas = () => {};
+export default { Scene, createShader };

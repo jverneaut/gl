@@ -7,6 +7,7 @@ export default {
     file: 'dist/gl.js',
     name: 'gl',
     format: 'umd',
+    exports: 'named',
   },
   plugins: [
     json(),
