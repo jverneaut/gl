@@ -8,8 +8,4 @@ const init = () => {
 
 init();
 
-export const createShader = () => {
-  log('Create new shader - not implemented');
-};
-
-export default { Scene, createShader };
+export default { Scene };
