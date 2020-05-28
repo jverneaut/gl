@@ -1,4 +1,4 @@
-import gl, { createShader } from 'gl';
+import gl from 'gl';
 
 import vShaderSource from '../shaders/vShader.glsl';
 import fShaderSource from '../shaders/fShader.glsl';
