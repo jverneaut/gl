@@ -1,3 +1,1 @@
-const gl = require('../gl');
-
-console.log('TEST');
+import gl from 'gl';
