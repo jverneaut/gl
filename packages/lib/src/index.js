@@ -1,1 +1,5 @@
-console.log('Lib');
+import { logVersion } from './utils/log';
+
+const init = logVersion;
+
+init();
