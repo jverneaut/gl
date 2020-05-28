@@ -1,0 +1,21 @@
+{
+  "name": "gl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/gl.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "rollup -wc",
+    "build": "rollup -c"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.10.1",
+    "rollup": "^2.11.2",
+    "rollup-plugin-babel": "^4.4.0"
+  }
+}
