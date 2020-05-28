@@ -1,3 +1,4 @@
+import 'regenerator-runtime/runtime';
 import { log, logVersion } from './utils/log';
 
 import Scene from './entities/Scene';

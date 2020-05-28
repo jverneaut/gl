@@ -53,8 +53,9 @@ export default class Scene {
     this.gl.useProgram(program);
   }
 
-  addImage() {
-    log('Add image to Scene instance - not implemented');
+  addImage(image) {
+    log('Add image to Scene instance');
+    const texture = createTexture(this.gl, image);
   }
 
   draw() {
@@ -77,4 +78,23 @@ export const createProgram = (context, vertexShader, fragmentShader) => {
   context.linkProgram(program);
 
   return program;
+};
+
+export const createTexture = (context, image) => {
+  const texture = context.createTexture();
+  context.bindTexture(context.TEXTURE_2D, texture);
+  context.texParameteri(context.TEXTURE_2D, context.TEXTURE_WRAP_S, context.CLAMP_TO_EDGE);
+  context.texParameteri(context.TEXTURE_2D, context.TEXTURE_WRAP_T, context.CLAMP_TO_EDGE);
+  context.texParameteri(context.TEXTURE_2D, context.TEXTURE_MAG_FILTER, context.NEAREST);
+  context.texParameteri(context.TEXTURE_2D, context.TEXTURE_MIN_FILTER, context.NEAREST);
+  context.texImage2D(
+    context.TEXTURE_2D,
+    0,
+    context.RGBA,
+    context.RGBA,
+    context.UNSIGNED_BYTE,
+    image
+  );
+
+  return texture;
 };
