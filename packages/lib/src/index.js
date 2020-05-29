@@ -2,6 +2,7 @@ import 'regenerator-runtime/runtime';
 import { log, logVersion } from './utils/log';
 
 import Scene from './entities/Scene';
+import Image from './entities/Image';
 
 const init = () => {
   logVersion();
@@ -9,4 +10,4 @@ const init = () => {
 
 init();
 
-export default { Scene };
+export default { Scene, Image };

@@ -53,9 +53,8 @@ export default class Scene {
     this.gl.useProgram(program);
   }
 
-  addImage(image) {
-    log('Add image to Scene instance');
-    const texture = createTexture(this.gl, image);
+  add(el) {
+    log('Add element on Scene instance - not implemented');
   }
 
   draw() {

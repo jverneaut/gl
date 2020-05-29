@@ -17,7 +17,9 @@ const init = async () => {
       image =>
         new Promise(resolve => {
           image.onload = () => {
-            scene.addImage(image);
+            const img = new gl.Image(image);
+            scene.add(img);
+
             resolve();
           };
         })
